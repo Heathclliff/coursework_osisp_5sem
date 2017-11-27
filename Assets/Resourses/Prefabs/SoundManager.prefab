@@ -51,3 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792471c934967b74790fb0ef9a85a626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click: {fileID: 82575693347075178, guid: 0e3143f81ab887046b29992a31512df2, type: 2}
+  background: {fileID: 82693229263658884, guid: 1704809429cdf1a40ab7136935be33e8,
+    type: 2}
+  loose: {fileID: 82904861211419746, guid: bf31626574684754394b3ba084c6d91b, type: 2}

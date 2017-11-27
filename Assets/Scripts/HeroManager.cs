@@ -2,15 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroManager : MonoBehaviour {
+public class HeroManager : MonoBehaviour 
+{
+	#region Variables
 
-	// Use this for initialization
-	void Start () {
-		
+	public static HeroManager Instanse;
+
+	#endregion
+
+
+	#region Unity lifecycle
+
+	void Awake()
+	{
+		if (Instanse == null) 
+		{
+			Instanse = this;
+		} 
+		else 
+			if(Instanse != this)
+			{
+				Destroy (gameObject);
+			}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+
+	void Start()
+	{
+
 	}
+
+	#endregion
+
+
+	#region Public methods
+
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
 }

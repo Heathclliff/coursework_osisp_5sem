@@ -2,15 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour 
+{
+	#region Variables
 
-	// Use this for initialization
-	void Start () {
-		
+	public static LevelManager Instanse;
+
+	#endregion
+
+
+	#region Unity lifecycle
+
+	void Awake()
+	{
+		if (Instanse == null) 
+		{
+			Instanse = this;
+		} 
+		else 
+			if(Instanse != this)
+			{
+				Destroy (gameObject);
+			}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+
+	void Start()
+	{
+		SoundManager.Instanse.PlayBackground ();
 	}
+
+	#endregion
+
+
+	#region Public methods
+
+	#endregion
+
+
+	#region Private methods
+
+	#endregion
+
 }

@@ -6,11 +6,12 @@ public class GameManager : MonoBehaviour
 {
 	#region Variables
 
-	public static GameManager instanse;
+	public static GameManager Instanse;
 
 	[SerializeField] GameObject prefabManager;
 
 	#endregion
+
 
 	#region Events
 
@@ -19,7 +20,6 @@ public class GameManager : MonoBehaviour
 	public static System.Action OnLevelEnd;
 	public static System.Action OnGameRestart;
 
-
 	#endregion
 
 
@@ -27,12 +27,12 @@ public class GameManager : MonoBehaviour
 
 	void Awake()
 	{
-		if (instanse == null) 
+		if (Instanse == null) 
 		{
-			instanse = this;
+			Instanse = this;
 		} 
 		else 
-			if(instanse != this)
+			if(Instanse != this)
 			{
 				Destroy (gameObject);
 			}
@@ -44,6 +44,16 @@ public class GameManager : MonoBehaviour
 		GameObject prefab = Instantiate (prefabManager);
 		prefab.transform.parent = this.gameObject.transform;
 	}
+
+	#endregion
+
+
+	#region Public methods
+
+	#endregion
+
+
+	#region Private methods
 
 	#endregion
 }

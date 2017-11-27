@@ -1,16 +1,134 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour {
+public class SoundManager : MonoBehaviour 
+{
+	#region Variables
 
-	// Use this for initialization
-	void Start () {
-		
+	public static SoundManager Instanse;
+
+	[Header("Sounds")]
+	[SerializeField] AudioSource click;
+	[SerializeField] AudioSource background;
+	[SerializeField] AudioSource loose;
+
+	#endregion
+
+
+	#region Properties
+
+	public bool IsMusicEnable
+	{
+		get { return Convert.ToBoolean(PlayerPrefs.GetInt("music",1)); }
+		set { 
+			if (value) 
+			{
+				PlayerPrefs.SetInt ("music",1);
+				background.Play ();
+			}
+			else 
+			{
+				PlayerPrefs.SetInt ("music",0);
+				background.Stop ();
+			}
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	#endregion
+
+	#region Unity lifecycle
+
+	void Awake()
+	{
+		if (Instanse == null) 
+		{
+			Instanse = this;
+		} 
+		else 
+			if(Instanse != this)
+			{
+				Destroy (gameObject);
+			}
 	}
+
+
+	void OnEnable()
+	{
+		GameManager.OnGameLoad += GameManager_OnGameLoad;
+		GameManager.OnLevelEnd += GameManager_OnLevelEnd;
+	}
+
+
+	void OnDisable()
+	{
+		GameManager.OnGameLoad -= GameManager_OnGameLoad;
+		GameManager.OnLevelEnd -= GameManager_OnLevelEnd;
+	}
+
+	#endregion
+
+
+	#region Public methods
+
+	public void PlayClick()
+	{
+		if (IsMusicEnable) 
+		{
+			click.Play ();
+		}
+	}
+
+
+	public void PlayLoose()
+	{
+		if (IsMusicEnable) 
+		{
+			loose.Play ();
+		}
+	}
+
+
+	public void PlayBackground()
+	{
+		if (IsMusicEnable) 
+		{
+			background.Play ();
+		}
+	}
+
+	#endregion
+
+
+	#region Events handlers
+
+	void GameManager_OnGameLoad()
+	{
+		InitializeSounds ();
+	}
+
+
+	void GameManager_OnLevelEnd()
+	{
+		PlayLoose ();
+	}
+
+	#endregion
+
+
+	#region Private methods
+
+	void InitializeSounds()
+	{
+		click = (AudioSource) Instantiate (click);
+		background = (AudioSource) Instantiate (background);
+		loose = (AudioSource) Instantiate (loose);
+
+		click.transform.parent = this.gameObject.transform;
+		background.transform.parent = this.gameObject.transform;
+		loose.transform.parent = this.gameObject.transform;
+	}
+
+	#endregion
 }
