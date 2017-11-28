@@ -293,45 +293,61 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4223876550095176, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+    - target: {fileID: 4937266194479612, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4223876550095176, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+    - target: {fileID: 4937266194479612, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4223876550095176, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+    - target: {fileID: 4937266194479612, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4223876550095176, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+    - target: {fileID: 4937266194479612, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4223876550095176, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+    - target: {fileID: 4937266194479612, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4223876550095176, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+    - target: {fileID: 4937266194479612, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4223876550095176, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+    - target: {fileID: 4937266194479612, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4223876550095176, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+    - target: {fileID: 4937266194479612, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114819222432672052, guid: 6a0e85980956a894981e10b71909ec61,
+    - target: {fileID: 114160382505023162, guid: 709fa6ff2eb36e84296a2a61c0ba78a0,
         type: 2}
       propertyPath: UICameraPosition
       value: 
       objectReference: {fileID: 666946460}
+    - target: {fileID: 114160382505023162, guid: 709fa6ff2eb36e84296a2a61c0ba78a0,
+        type: 2}
+      propertyPath: playButtonPrefab
+      value: 
+      objectReference: {fileID: 1398828358170218, guid: 5c581de1a762c3743ae5b8edc253b721,
+        type: 2}
+    - target: {fileID: 114160382505023162, guid: 709fa6ff2eb36e84296a2a61c0ba78a0,
+        type: 2}
+      propertyPath: musicButtonPrefab
+      value: 
+      objectReference: {fileID: 1029968993221122, guid: 562812016ad7abe4bb1bfe00bb43ac49,
+        type: 2}
+    - target: {fileID: 1459913955577486, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6a0e85980956a894981e10b71909ec61, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 709fa6ff2eb36e84296a2a61c0ba78a0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1829015313
 Prefab:

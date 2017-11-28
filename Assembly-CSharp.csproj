@@ -56,7 +56,10 @@
      <Compile Include="Assets\Scripts\Game\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Game\PrefabManager.cs" />
      <Compile Include="Assets\Scripts\Game\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\GUI\Button.cs" />
      <Compile Include="Assets\Scripts\GUI\GUILevelManager.cs" />
+     <Compile Include="Assets\Scripts\GUI\MusicButton.cs" />
+     <Compile Include="Assets\Scripts\GUI\PlayButton.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

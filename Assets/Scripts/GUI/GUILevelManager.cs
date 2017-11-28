@@ -9,9 +9,13 @@ public class GUILevelManager : MonoBehaviour
 	public static GUILevelManager Instanse;
 
 	[SerializeField] Transform UICameraPosition;
+	[SerializeField] GameObject playButtonPrefab;
+	[SerializeField] GameObject musicButtonPrefab;
 	[SerializeField] List<GameObject> backgroundsList;
 
 	GameObject background;
+	GameObject playButton;
+	GameObject musicButton;
 	SpriteRenderer currentSprite;
 
 	#endregion
@@ -35,11 +39,9 @@ public class GUILevelManager : MonoBehaviour
 
 	void Start()
 	{
-		int randomNumber = Random.Range (0,backgroundsList.Count);
-		background =Instantiate (backgroundsList[randomNumber],UICameraPosition);
-		background.transform.parent = this.gameObject.transform;
-
-		SetBackgroundSizes ();
+		SetBackground ();
+		SetMusicButton ();
+		SetPlayButton ();
 	}
 
 
@@ -64,8 +66,25 @@ public class GUILevelManager : MonoBehaviour
 
 	#region Private methods
 
-	void SetBackgroundSizes()
+	void SetMusicButton()
 	{
+		musicButton = Instantiate (musicButtonPrefab, UICameraPosition);
+		musicButton.transform.parent = this.gameObject.transform;
+	}
+
+	void SetPlayButton()
+	{
+		playButton = Instantiate (playButtonPrefab, UICameraPosition);
+		playButton.transform.parent = this.gameObject.transform;
+	}
+
+
+	void SetBackground()
+	{
+		int randomNumber = Random.Range (0,backgroundsList.Count);
+		background =Instantiate (backgroundsList[randomNumber],UICameraPosition);
+		background.transform.parent = this.gameObject.transform;
+
 		currentSprite = background.GetComponent<SpriteRenderer> ();
 		if (currentSprite != null) 
 		{
@@ -85,7 +104,7 @@ public class GUILevelManager : MonoBehaviour
 
 	void GameManager_OnGameStart()
 	{
-		
+//		playButton.SetActive (false);
 	}
 
 	#endregion
