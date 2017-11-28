@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SoundManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GUI\GUILevelManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\PrefabManager.cs" Line="26" Column="15" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="35" Column="15" />
-      <File FileName="Assets\Scripts\HeroManager.cs" Line="23" Column="15" />
-      <File FileName="Assets\Scripts\SoundManager.cs" Line="67" Column="27" />
-      <File FileName="Assets\Scripts\LevelManager.cs" Line="23" Column="15" />
+      <File FileName="Assets\Scripts\GUI\GUILevelManager.cs" Line="39" Column="74" />
+      <File FileName="Assets\Scripts\Game\SoundManager.cs" Line="76" Column="5" />
+      <File FileName="Assets\Scripts\Game\PrefabManager.cs" Line="22" Column="3" />
+      <File FileName="Assets\Scripts\Game\HeroManager.cs" Line="13" Column="2" />
+      <File FileName="Assets\Scripts\Game\GameManager.cs" Line="54" Column="19" />
+      <File FileName="Assets\Scripts\Game\LevelManager.cs" Line="32" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -51,11 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\HeroManager.cs" />
-     <Compile Include="Assets\Scripts\LevelManager.cs" />
-     <Compile Include="Assets\Scripts\PrefabManager.cs" />
-     <Compile Include="Assets\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Game\HeroManager.cs" />
+     <Compile Include="Assets\Scripts\Game\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Game\PrefabManager.cs" />
+     <Compile Include="Assets\Scripts\Game\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\GUI\GUILevelManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
