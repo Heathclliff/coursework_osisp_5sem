@@ -10,7 +10,7 @@ public class MusicButton : Button
 	[SerializeField] Sprite musicOnSprite;
 	[SerializeField] Sprite musicOffSprite;
 
-	Vector2 musicButtonPosition = new Vector2 (-2.5f, 1000f);
+	Vector2 musicButtonPosition = new Vector2 (-2.5f, 997.5f);
 
 	#endregion
 

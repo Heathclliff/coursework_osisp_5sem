@@ -10,7 +10,7 @@ public class PlayButton : Button
 	{
 		base.OnMouseUp ();
 
-		GameManager.OnGameStart ();
+		GameManager.Instanse.PlayNewLevel ();
 	}
 
 	#endregion

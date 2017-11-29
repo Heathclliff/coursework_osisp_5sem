@@ -58,14 +58,12 @@ public class SoundManager : MonoBehaviour
 
 	void OnEnable()
 	{
-		GameManager.OnGameStart += GameManager_OnGameStart;
 		GameManager.OnLevelEnd += GameManager_OnLevelEnd;
 	}
 
 
 	void OnDisable()
 	{
-		GameManager.OnGameStart -= GameManager_OnGameStart;
 		GameManager.OnLevelEnd -= GameManager_OnLevelEnd;
 	}
 
@@ -111,12 +109,6 @@ public class SoundManager : MonoBehaviour
 
 
 	#region Events handlers
-
-	void GameManager_OnGameStart()
-	{
-		
-	}
-
 
 	void GameManager_OnLevelEnd()
 	{

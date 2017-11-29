@@ -10,13 +10,15 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField] GameObject prefabManager;
 
+	public int score = 0;
+
 	#endregion
 
 
 	#region Events
 
-	public static System.Action OnGameLoad;
-	public static System.Action OnGameStart;
+	//public static System.Action OnGameStart;
+	public static System.Action OnNewLevel;
 	public static System.Action OnLevelEnd;
 	public static System.Action OnGameRestart;
 
@@ -41,24 +43,45 @@ public class GameManager : MonoBehaviour
 
 	void OnEnable()
 	{
-		GameObject prefab = Instantiate (prefabManager);
-		prefab.transform.parent = this.gameObject.transform;
 
 	}
 
 
 	void Start()
 	{
-		if (OnGameStart != null)
-		{
-			OnGameStart ();
-		}
+		GameObject prefab = Instantiate (prefabManager);
+		prefab.transform.parent = this.gameObject.transform;
 	}
 
 	#endregion
 
 
 	#region Public methods
+
+	public void PlayNewLevel()
+	{
+		if (OnNewLevel != null) 
+		{
+			OnNewLevel ();
+		}
+	}
+
+
+	public void PlayLevelEnd()
+	{
+		if (OnLevelEnd != null) 
+		{
+			OnLevelEnd ();
+		}
+	}
+
+	public void PlayGameRestart()
+	{
+		if (OnGameRestart != null) 
+		{
+			OnGameRestart ();
+		}
+	}
 
 	#endregion
 
