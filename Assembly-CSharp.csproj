@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\GUI\Button.cs" />
      <Compile Include="Assets\Scripts\GUI\GUILevelManager.cs" />
      <Compile Include="Assets\Scripts\GUI\GUIManager.cs" />
+     <Compile Include="Assets\Scripts\GUI\HomeButton.cs" />
      <Compile Include="Assets\Scripts\GUI\MusicButton.cs" />
      <Compile Include="Assets\Scripts\GUI\PanelsController.cs" />
      <Compile Include="Assets\Scripts\GUI\PlayButton.cs" />

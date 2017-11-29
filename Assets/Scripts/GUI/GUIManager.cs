@@ -51,6 +51,15 @@ public class GUIManager : MonoBehaviour
 		}
 	}
 
+
+	public void ShowGameScreen()
+	{
+		if (OnGameScreen != null) 
+		{
+			OnGameScreen ();
+		}
+	}
+
 	#endregion
 
 

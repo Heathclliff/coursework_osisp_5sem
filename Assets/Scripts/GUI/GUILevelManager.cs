@@ -13,15 +13,20 @@ public class GUILevelManager : MonoBehaviour
 	[Header("GameMenu")]
 	[SerializeField] GameObject playButtonPrefab;
 	[SerializeField] GameObject musicButtonPrefab;
+	[SerializeField] GameObject cherryPrefab;
 
+	[Header("ResultScreen")]
+	[SerializeField] GameObject homeButtonPrefab;
 	[SerializeField] List<GameObject> backgroundsList;
 
 	GameObject background;
 
 	GameObject playButton;
 	GameObject musicButton;
+	GameObject cherry;
 	SpriteRenderer currentSprite;
 
+	GameObject homeButton;
 
 	#endregion
 
@@ -47,6 +52,8 @@ public class GUILevelManager : MonoBehaviour
 		SetBackground ();
 		SetMusicButton ();
 		SetPlayButton ();
+		SetCherry ();
+		SetHomeButton ();
 	}
 
 
@@ -85,10 +92,19 @@ public class GUILevelManager : MonoBehaviour
 		musicButton.transform.parent = this.gameObject.transform;
 	}
 
+
 	void SetPlayButton()
 	{
 		playButton = Instantiate (playButtonPrefab, UICameraPosition);
 		playButton.transform.parent = this.gameObject.transform;
+	}
+
+
+	void SetCherry()
+	{
+		cherry = Instantiate (cherryPrefab);
+		cherry.transform.parent = this.gameObject.transform;
+		cherry.SetActive (false);
 	}
 
 
@@ -111,6 +127,13 @@ public class GUILevelManager : MonoBehaviour
 	}
 
 
+	void SetHomeButton()
+	{
+		homeButton = Instantiate (homeButtonPrefab);
+		homeButton.transform.parent = this.gameObject.transform;
+		homeButton.SetActive (false);
+	}
+
 	#endregion
 
 
@@ -120,23 +143,28 @@ public class GUILevelManager : MonoBehaviour
 	{
 		playButton.SetActive (true);
 		musicButton.SetActive (true);
+		cherry.SetActive (false);
 	}
 
 	void GUIManager_OnResultScreen()
 	{
-		
+		cherry.SetActive (false);
+		homeButton.SetActive (false);
 	}
 
 
 	void GameManager_OnNewLevel()
 	{
-		
+		playButton.SetActive (false);
+		musicButton.SetActive (false);
+		cherry.SetActive (true);
 	}
 
 
 	void GameManager_OnLevelEnd()
 	{
-		
+		cherry.SetActive (false);
+		homeButton.SetActive (false);
 	}
 
 	#endregion
