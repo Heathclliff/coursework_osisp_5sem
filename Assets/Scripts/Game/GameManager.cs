@@ -9,10 +9,28 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instanse;
 
 	[SerializeField] GameObject prefabManager;
+    [SerializeField] float movingSpeed = 1f;
 
 	public int score = 0;
 
 	#endregion
+
+
+    #region Properties
+
+    public float MovingSpeed
+    {
+        get { return movingSpeed; }
+        set 
+        {
+            if (movingSpeed != value)
+            {
+                movingSpeed = value;
+            }
+        }
+    }
+
+    #endregion
 
 
 	#region Events

@@ -19,6 +19,7 @@ public class Button : MonoBehaviour {
 		spriteRenderer.sprite = mouseDownSprite;
 	}
 
+
 	public virtual void OnMouseUp()
 	{
 		spriteRenderer.sprite = mouseUpSprite;

@@ -1,14 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GUI\GUILevelManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUI/ShareFBButton.cs">
     <Files>
-      <File FileName="Assets\Scripts\Game\GameManager.cs" Line="5" Column="1" />
-      <File FileName="Assets\Scripts\GUI\GUILevelManager.cs" Line="167" Column="30" />
-      <File FileName="Assets\Scripts\Game\HeroManager.cs" Line="44" Column="2" />
-      <File FileName="Assets\Scripts\GUI\PanelsController.cs" Line="141" Column="47" />
-      <File FileName="Assets\Scripts\GUI\HomeButton.cs" Line="13" Column="41" />
-      <File FileName="Assets\Scripts\GUI\PlayButton.cs" Line="17" Column="2" />
-      <File FileName="Assets\Scripts\GUI\GUIManager.cs" Line="59" Column="16" />
+      <File FileName="Assets/Scripts/GUI/HomeButton.cs" Line="40" Column="5" />
+      <File FileName="Assets/Scripts/GUI/GUILevelManager.cs" Line="76" Column="28" />
+      <File FileName="Assets/Scripts/GUI/PanelsController.cs" Line="64" Column="2" />
+      <File FileName="Assets/Scripts/Game/LevelManager.cs" Line="93" Column="67" />
+      <File FileName="Assets/Scripts/Game/HeroManager.cs" Line="126" Column="6" />
+      <File FileName="Assets/Scripts/GUI/GUIManager.cs" Line="8" Column="5" />
+      <File FileName="Assets/Scripts/Game/GameManager.cs" Line="21" Column="12" />
+      <File FileName="Assets/Scripts/GUI/StickManager.cs" Line="140" Column="1" />
+      <File FileName="Assets/Scripts/GUI/ShareFBButton.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/GUI/ShareTWButton.cs" Line="12" Column="62" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

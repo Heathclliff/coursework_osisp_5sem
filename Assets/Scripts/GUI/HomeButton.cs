@@ -13,5 +13,53 @@ public class HomeButton : Button
 		GUIManager.Instanse.ShowGameScreen ();
 	}
 
+
+    void OnEnable()
+    {
+        GUIManager.OnGameScreen += GUIManager_OnGameScreen;
+        GUIManager.OnResultScreen += GUIManager_OnResultScreen;
+
+        GameManager.OnNewLevel += GameManager_OnNewLevel;
+        GameManager.OnLevelEnd += GameManager_OnLevelEnd;
+    }
+
+
+    void OnDisable()
+    {
+        GUIManager.OnGameScreen -= GUIManager_OnGameScreen;
+        GUIManager.OnResultScreen -= GUIManager_OnResultScreen;
+
+        GameManager.OnNewLevel -= GameManager_OnNewLevel;
+        GameManager.OnLevelEnd -= GameManager_OnLevelEnd;
+    }
+
 	#endregion
+
+
+    #region Events handlers
+
+    void GUIManager_OnGameScreen()
+    {
+        this.gameObject.SetActive (false);
+    }
+
+
+    void GUIManager_OnResultScreen()
+    {
+        this.gameObject.SetActive (true);
+    }
+
+
+    void GameManager_OnNewLevel()
+    {
+        this.gameObject.SetActive (false);
+    }
+
+
+    void GameManager_OnLevelEnd()
+    {        
+        this.gameObject.SetActive (true);
+    }
+
+    #endregion
 }

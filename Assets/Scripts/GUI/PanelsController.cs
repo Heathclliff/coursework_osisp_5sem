@@ -127,11 +127,13 @@ public class PanelsController : MonoBehaviour
 	void GUIManager_OnGameScreen()
 	{
 		SetPanelsState (false, false, false);
+        adviseTextLabel.gameObject.SetActive(false);
 	}
 
 	void GUIManager_OnResultScreen()
 	{
 		//SetPanelsState (false, true, false);
+        //adviseTextLabel.gameObject.SetActive(false);
 	}
 
 
@@ -145,6 +147,7 @@ public class PanelsController : MonoBehaviour
 	void GameManager_OnLevelEnd()
 	{
 		SetPanelsState (false, true, false);
+        adviseTextLabel.gameObject.SetActive(false);
 	}
 
 	#endregion

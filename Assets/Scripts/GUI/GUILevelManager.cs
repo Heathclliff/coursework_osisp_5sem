@@ -17,6 +17,10 @@ public class GUILevelManager : MonoBehaviour
 
 	[Header("ResultScreen")]
 	[SerializeField] GameObject homeButtonPrefab;
+    [SerializeField] GameObject ResultButtonPrefab;
+    [SerializeField] GameObject RestartButtonPrefab;
+    [SerializeField] GameObject ShareTWButtonPrefab;
+    [SerializeField] GameObject ShareFBButtonPrefab;
 	[SerializeField] List<GameObject> backgroundsList;
 
 	GameObject background;
@@ -27,6 +31,10 @@ public class GUILevelManager : MonoBehaviour
 	SpriteRenderer currentSprite;
 
 	GameObject homeButton;
+    GameObject resultButton;
+    GameObject restartButton;
+    GameObject shareTWButton;
+    GameObject shareFBButton;
 
 	#endregion
 
@@ -53,7 +61,12 @@ public class GUILevelManager : MonoBehaviour
 		SetMusicButton ();
 		SetPlayButton ();
 		SetCherry ();
-		SetHomeButton ();
+
+        SetButton (homeButton, homeButtonPrefab);
+        SetButton (resultButton, ResultButtonPrefab);
+        SetButton (restartButton, RestartButtonPrefab);
+        SetButton (shareFBButton, ShareFBButtonPrefab);
+        SetButton (shareTWButton, ShareTWButtonPrefab);
 	}
 
 
@@ -80,6 +93,7 @@ public class GUILevelManager : MonoBehaviour
 
 
 	#region Public methods
+
 
 	#endregion
 
@@ -127,11 +141,11 @@ public class GUILevelManager : MonoBehaviour
 	}
 
 
-	void SetHomeButton()
+    void SetButton(GameObject button, GameObject prefab)
 	{
-		homeButton = Instantiate (homeButtonPrefab);
-		homeButton.transform.parent = this.gameObject.transform;
-		homeButton.SetActive (false);
+        button = Instantiate (prefab);
+        button.transform.parent = this.gameObject.transform;
+        button.SetActive (false);
 	}
 
 	#endregion
@@ -145,6 +159,7 @@ public class GUILevelManager : MonoBehaviour
 		musicButton.SetActive (true);
 		cherry.SetActive (false);
 	}
+
 
 	void GUIManager_OnResultScreen()
 	{

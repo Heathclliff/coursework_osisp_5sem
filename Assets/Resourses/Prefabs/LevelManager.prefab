@@ -51,3 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac127cc30de9d1b44bbe8a67b9d456fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heightkoeff: 50
+  widthKoeff: 50
+  blockColor:
+    serializedVersion: 2
+    rgba: 0
+  blockPrefab: {fileID: 0}
